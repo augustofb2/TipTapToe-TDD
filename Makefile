@@ -18,3 +18,4 @@ velha.o: velha.cpp
 
 clean:
 	rm -f $(OBJS) $(OUT)
+	

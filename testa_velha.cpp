@@ -3,9 +3,11 @@
 #include "catch.hpp"
 #include "velha.hpp"
 
-TEST_CASE( "Factorials are computed", "[factorial]" ) {
-    REQUIRE( Factorial(1) == 1 );
-    REQUIRE( Factorial(2) == 2 );
-    REQUIRE( Factorial(3) == 6 );
-    REQUIRE( Factorial(10) == 3628800 );
+TEST_CASE( "X should win", "[checkwinner]" ) {
+    int board[3][3] = {
+        {1, 1, 1},
+        {0, 2, 2},
+        {2, 1, 0}
+    };
+    REQUIRE(checkWinner(board) == 1);
 }
