@@ -4,4 +4,5 @@
  int checkWinner(int board[][3]);
  
  bool xWinner(int board[][3]);
+ bool oWinner(int board[][3]);
 #endif // VELHA_HPP_INCLUDED
