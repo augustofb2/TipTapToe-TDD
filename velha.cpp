@@ -11,7 +11,7 @@ int checkWinner(int board[][3])
     if(isDraw(board))
         return 0;
     
-    return 10;
+    return -1;
 }
     
 bool xWinner(int board[][3])
