@@ -2,6 +2,8 @@
 
 int checkWinner(int board[][3])
 {
+    if(checkImpossible(board))
+        return -1;
     if(xWinner(board))
         return 1;
     if(oWinner(board))
@@ -47,6 +49,25 @@ bool oWinner(int board[][3])
     if(board[0][0] == 2 && board[1][1] == 2 && board[2][2] == 2)
         return true;
     if(board[0][2] == 2 && board[1][1] == 2 && board[2][0] == 2)
+        return true;
+    
+    return false;
+}
+
+bool checkImpossible(int board[][3])
+{
+    int i, j;
+    int xCount = 0, oCount = 0;
+    
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+            if(board[i][j] == 1)
+                xCount++;
+            else if(board[i][j] == 2)
+                oCount++;
+        }
+    }
+    if(oCount > xCount || oCount < xCount - 1)
         return true;
     
     return false;
