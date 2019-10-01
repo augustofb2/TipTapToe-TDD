@@ -9,6 +9,7 @@ TEST_CASE( "X should win", "[checkwinner]" ) {
         {0, 2, 2},
         {2, 1, 0}
     };
+    REQUIRE(xWinner(board));
     REQUIRE(checkWinner(board) == 1);
 }
 
@@ -18,5 +19,6 @@ TEST_CASE( "O should win", "[checkwinner]" ) {
         {2, 1, 0},
         {2, 1, 0}
     };
+    REQUIRE(oWinner(board));
     REQUIRE(checkWinner(board) == 2);
 }
