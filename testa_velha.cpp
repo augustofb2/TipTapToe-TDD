@@ -32,3 +32,12 @@ TEST_CASE( "Impossible game", "[checkwinner]" ) {
     REQUIRE(checkImpossible(board));
     REQUIRE(checkWinner(board) == -2);
 }
+
+TEST_CASE("Game should draw", "[checkwinner]" ) {
+    int board[3][3] = {
+        {1, 2, 1},
+        {1, 2, 2},
+        {2, 1, 1}
+    };
+    REQUIRE(checkWinner(board) == 0);
+}

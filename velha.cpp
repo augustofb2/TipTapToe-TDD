@@ -9,7 +9,7 @@ int checkWinner(int board[][3])
     if(oWinner(board))
         return 2;
     
-    return 0;
+    return 10;
 }
     
 bool xWinner(int board[][3])
