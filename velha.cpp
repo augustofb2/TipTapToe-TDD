@@ -8,6 +8,8 @@ int checkWinner(int board[][3])
         return 1;
     if(oWinner(board))
         return 2;
+    if(isDraw(board))
+        return 0;
     
     return 10;
 }
@@ -71,4 +73,17 @@ bool checkImpossible(int board[][3])
         return true;
     
     return false;
+}
+
+bool isDraw(int board[][3])
+{
+    int i, j;
+    
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+            if(board[i][j] == 0)
+                return false;
+        }
+    }
+    return true;
 }

@@ -39,5 +39,6 @@ TEST_CASE("Game should draw", "[checkwinner]" ) {
         {1, 2, 2},
         {2, 1, 1}
     };
+    REQUIRE(isDraw(board));
     REQUIRE(checkWinner(board) == 0);
 }
