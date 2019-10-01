@@ -11,3 +11,12 @@ TEST_CASE( "X should win", "[checkwinner]" ) {
     };
     REQUIRE(checkWinner(board) == 1);
 }
+
+TEST_CASE( "O should win", "[checkwinner]" ) {
+    int board[3][3] = {
+        {2, 2, 1},
+        {2, 1, 0},
+        {2, 1, 0}
+    };
+    REQUIRE(checkWinner(board) == 2);
+}
