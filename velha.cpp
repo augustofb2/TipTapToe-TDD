@@ -3,7 +3,7 @@
 int checkWinner(int board[][3])
 {
     if(checkImpossible(board))
-        return -1;
+        return -2;
     if(xWinner(board))
         return 1;
     if(oWinner(board))

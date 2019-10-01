@@ -30,5 +30,5 @@ TEST_CASE( "Impossible game", "[checkwinner]" ) {
         {2, 1, 2}
     };
     REQUIRE(checkImpossible(board));
-    REQUIRE(checkWinner(board) == -1);
+    REQUIRE(checkWinner(board) == -2);
 }
