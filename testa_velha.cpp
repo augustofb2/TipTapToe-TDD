@@ -42,3 +42,12 @@ TEST_CASE("Game should draw", "[checkwinner]" ) {
     REQUIRE(isDraw(board));
     REQUIRE(checkWinner(board) == 0);
 }
+
+TEST_CASE("Game undefined", "[checkwinner]" ) {
+    int board[3][3] = {
+        {0, 2, 0},
+        {1, 0, 2},
+        {0, 1, 1}
+    };
+    REQUIRE(checkWinner(board) == -1);
+}
